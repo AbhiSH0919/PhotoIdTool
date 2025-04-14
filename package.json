@@ -1,0 +1,16 @@
+{
+	"name": "photoidtool",
+	"version": "1.0.0",
+	"description": "Photo ID Tool is a fast and user-friendly web application designed to help you create passport-size photos in just a few clicks.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"photo id tool",
+		"passport size photos",
+		"photos"
+	],
+	"author": "AbhiSh0919",
+	"license": "ISC"
+}

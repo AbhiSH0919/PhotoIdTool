@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Photo Id Tool</title>
+	<meta name="description" content="Photo ID Tool is a fast and user-friendly web application designed to help you create passport-size photos in just a few clicks.">
+	<link rel="stylesheet" href="resources/style.css">
+	<link rel="shortcut icon" href="resources/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+	<header class="header">
+		<img class="logo" src="resources/favicon.svg" alt="logo">
+		<h1 class="primary-heading">Photo Id Tool</h1>
+	</header>
+
+	<section class="section">
+		<div class="mainContainer showLoade" aria-placeholder="drop Your Images Here!">
+			<div class="imgContainer">
+				<!-- <img src="AbhishekKembalikarLarge.jpg" class="img" crossorigin="anonymous"> -->
+			</div>
+		</div>
+
+		<div class="loader" aria-label="pdf generation loading"></div>
+	</section>
+
+	<div class="utilityBox">
+		<label for="fileInput">Choose images from here / Drop images on board</label>
+		<input type="file" name="file" id="fileInput" multiple>
+
+		<label for="imageCopyNum">Copy of Images add :</label>
+		<input type="number" name="number" id="imageCopyNum" value="8">
+
+		<button type="button" class="btn reset">Clear All Images</button>
+		<button type="button" class="btn generate">Generate More Image</button>
+
+		<button type="button" class="btn download">Download as PDF</button>
+		<button type="button" class="btn print">🖨️ Print This Page</button>
+	</div>
+
+
+	<footer>
+		<p class="copyright">&copy;2025.</p>
+		<cite class="aurthor">Created by - <a href="https://github.com/AbhiSH0919" target="_blank">@AbhiSH0919</a></cite>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+	<script src="resources/index.js"></script>
+
+</body>
+
+</html>
