@@ -4,7 +4,7 @@ const mainContainer = document.querySelector(".mainContainer");
 const imgContainer = document.querySelector(".imgContainer");
 const utilityBox = document.querySelector(".utilityBox");
 const fileInput = document.getElementById("fileInput");
-let str = imgContainer.innerHTML;
+let str = "";
 
 const downloadPDF = async function (e) {
 	mainContainer.classList.add("showLoader");
@@ -13,7 +13,7 @@ const downloadPDF = async function (e) {
 		position: "relative",
 		top: 0,
 		left: 0,
-		margin: 0,
+		margin: 3,
 		filename: "Img.pdf",
 		image: { type: "png", quality: 1 },
 		html2canvas: { scale: 4, useCORS: true },
@@ -73,7 +73,9 @@ const addImg = function (files) {
 				str += `<img src="${imageURL}" class="img" crossorigin="anonymous">`;
 			}
 		} else {
-			alert("Please select a valid image file.");
+			alert(
+				"Please select a valid image file.\nYour selected image file is wrong"
+			);
 			return;
 		}
 

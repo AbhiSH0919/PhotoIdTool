@@ -38,8 +38,8 @@
 
 ## 📝 Usage
 
-1. **Upload** or drag your photo(s) onto the canvas.
-2. Select the **number of copies** you need.
+1. Select the **number of copies** you need.
+2. **Upload** or **drop** your photo(s) onto the canvas.
 3. Click **"Download as PDF"** to save your ID photo sheet.
 4. You can also choose to **Print directly** from the browser.
 
@@ -48,5 +48,9 @@
 ## 🚀 Live Demo
 
 [Click here to try the](https://photoidtool.netlify.app) Photo Id Tool
+
+## 🚀 On Github
+
+[Check the repository](https://github.com/AbhiSH0919/PhotoIdTool) Photo ID Tool
 
 ---
