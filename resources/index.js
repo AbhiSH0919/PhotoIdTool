@@ -1,5 +1,5 @@
 "use-strict";
-
+const menuBtn = document.querySelector(".menuBtn");
 const mainContainer = document.querySelector(".mainContainer");
 const imgContainer = document.querySelector(".imgContainer");
 const utilityBox = document.querySelector(".utilityBox");
@@ -111,4 +111,9 @@ mainContainer.addEventListener("dragleave", function (e) {
 fileInput.addEventListener("input", function (e) {
 	e.preventDefault();
 	addImg(e.target.files);
+});
+
+menuBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	utilityBox.classList.toggle("show");
 });
