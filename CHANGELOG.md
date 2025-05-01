@@ -14,3 +14,18 @@
 ### Notes
 
 - No breaking changes. Existing features (upload, generate, download PDF) still work the same.
+
+---
+
+## [2.1.0] - 2025-04-01
+
+### Added
+
+- Migration from traditional development to React Vite framework.
+- Added neccessary packages development.
+
+### Notes
+
+- breaking changes. Existing features (upload, generate, download PDF) not working.
+
+---

@@ -19,9 +19,12 @@
 
 ## 🛠️ Tech Stack
 
-- HTML5, CSS3, JavaScript
+- `React vite` (HTML5, CSS3, JavaScript) for development
+- `Sass` for css proccesing & styling
+- `Redux Toolkit` for managing data with flow
+- `React Router` for multiple pages
 - `html2pdf.js` for PDF generation
-- SVG icon
+- `SVG icons` for favicon & icons
 
 ---
 
@@ -33,7 +36,7 @@
    ```bash
    git clone https://github.com/AbhiSH0919/PhotoIdTool.git
    cd PhotoIdTool
-   live-server
+   npm run dev
    ```
 
 ## 📝 Usage
