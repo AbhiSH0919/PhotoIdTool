@@ -1,0 +1,123 @@
+//  /* ===btn=== */
+.btn {
+	//  /* ===btn NESTING=== */
+	&,
+	&:link,
+	&:visited {
+		text-decoration: none;
+		display: inline-block;
+		padding: 1.5rem 4rem;
+		border-radius: 10rem;
+		text-transform: uppercase;
+		transition: all 0.2s;
+		position: relative;
+
+		// this changes for the <button>
+		border: none;
+		cursor: pointer;
+	}
+
+	&:hover {
+		transform: translateY(-0.3rem);
+		box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+		&::before {
+			transform: scaleX(1.4) scaleY(1.6);
+			cursor: default;
+			opacity: 0;
+		}
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-0.1rem);
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+	}
+
+	// FOR THE CURSOR OVER EFFECT TURN OFF_______
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		color: $color-white;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	// _________________________________
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all 0.4s;
+	}
+}
+
+//  /* ==btn_background-color_effect== */
+
+.btn--white {
+	color: $color-gray-dark;
+	background-color: $color-white;
+
+	//  /* ===NESTING=== */
+
+	&:hover::before {
+		background-color: $color-white;
+		// background-color: rgba(255, 0, 0, 0.118);
+		// outline: 5rem solid $color-white;
+	}
+}
+
+.btn--green {
+	color: $color-white;
+	background-color: $primary-color;
+
+	&:hover::before {
+		background-color: $primary-color;
+		// background-color: rgba(255, 0, 0, 0.118);
+		// outline: 5rem solid $primary-color;
+	}
+}
+
+// /* ==btn-animation== */
+.btn--animated {
+	animation: MoveInBottom 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
+}
+
+.btn-text {
+	&:link,
+	&:visited {
+		display: inline-block;
+		font-size: 1.8rem;
+		color: $primary-color;
+		text-decoration: none;
+		padding: 3px;
+		border-bottom: 1px solid $primary-color;
+		transition: all 0.2s;
+	}
+
+	&:hover {
+		color: $color-white;
+		background-color: $primary-color;
+		box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: translateY(0);
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+	}
+}

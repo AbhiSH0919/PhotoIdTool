@@ -3,12 +3,21 @@
 	"private": true,
 	"version": "2.0.0",
 	"description": "Photo ID Tool is a fast and user-friendly web application designed to help you create passport-size photos in just a few clicks.",
+	"author": "AbhiSh0919",
+	"license": "ISC",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint .",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"watch:sass": "node-sass src/main/dev_abhi/assets/resources/styles/sass/main.scss src/main/dev_abhi/assets/resources/styles/css/style.css -w",
+		"compile:sass": "node-sass src/main/dev_abhi/assets/resources/styles/sass/main.scss src/main/dev_abhi/assets/resources/styles/css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/main/dev_abhi/assets/resources/styles/css/style.comp.css -o src/main/dev_abhi/assets/resources/styles/css/style.prefix.css",
+		"compress:css": "node-sass src/main/dev_abhi/assets/resources/styles/css/style.prefix.css src/main/dev_abhi/assets/resources/styles/css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css",
+		"start": "npm-run-all --parallel dev watch:sass",
+		"build:project": "npm-run-all build:css build"
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.7.0",
@@ -38,7 +47,5 @@
 		"photo id tool",
 		"passport size photos",
 		"photos"
-	],
-	"author": "AbhiSh0919",
-	"license": "ISC"
+	]
 }

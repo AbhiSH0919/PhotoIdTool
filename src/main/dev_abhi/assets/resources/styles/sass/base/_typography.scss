@@ -1,0 +1,96 @@
+body {
+	font-family: "Lato", sans-serif;
+	line-height: 1.7;
+	font-weight: 400;
+	// font-size: 2rem;
+	// font-size: 1.8rem;
+	font-size: 1.6rem;
+	color: $color-gray-dark;
+	backface-visibility: hidden;
+
+	@include respond(tab-port) {
+		font-size: 2.2rem;
+	}
+
+	@include respond(small-phone) {
+		font-size: 2.3rem;
+	}
+
+	@include respond(big-desk) {
+		font-size: 2rem;
+	}
+}
+
+.heading-primary {
+	color: $color-white;
+	text-transform: uppercase;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	margin-bottom: 6rem;
+
+	//  /* ===NESTING=== */
+
+	&--main {
+		display: block;
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+		animation: MoveInLeft 1s ease-out;
+
+		@include respond(phone) {
+			letter-spacing: 2rem;
+			font-size: 4rem;
+		}
+	}
+
+	&--sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+		animation: MoveInRight 1s ease-out;
+
+		@include respond(phone) {
+			letter-spacing: 0.5rem;
+		}
+	}
+}
+
+// ==========section-about==========
+.secondary-heading {
+	font-size: 3.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	padding: 0 2rem;
+	background-image: linear-gradient(
+		to right,
+		$primary-color-light,
+		$primary-color-dark
+	);
+	display: inline-block;
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: all 0.2s;
+
+	@include respond(tab-port) {
+		font-size: 3rem;
+	}
+
+	&:hover {
+		transform: scale(1.1) skewX(15deg) skewY(2deg);
+		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+	}
+}
+
+.heading-tertiary {
+	font-size: inherit;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}

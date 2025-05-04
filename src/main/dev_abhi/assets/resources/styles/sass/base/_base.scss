@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; // 1rem = 16px = 10/16 = 62.5%
+	// font-size: 64%;
+	scroll-behavior: smooth;
+
+	/* =====================================================================
+
+  // ===========ITS THE REGULAR TRICK========TYPE @MEDIA QUERY FOR EVERY SECTION/ELEMENTS=========
+  // @media (max-width: 600px) {
+  //   font-size: 50%;
+  // }
+
+  // ===========ITS THE REGULAR @MIXIN TRICK=================
+  // @include respond-phone {
+  //   font-size: 50%;
+  // }
+
+  ===================================================================== */
+
+	// ===========ITS THE @MIXIN FUNCTINALITY TRICK=================
+
+	@include respond(tab-land) {
+		// WIDTH < 1200PX = 75em
+		font-size: 56.25%; // 1rem = 9px; 9/16 = 56.25%;
+	}
+
+	@include respond(tab-port) {
+		// WIDTH < 900PX = 56.25em
+		font-size: 50%; // 1rem = 8px; 8/16 = 50%;
+	}
+
+	@include respond(small-phone) {
+		// WIDTH < 420PX = 26.25em
+		font-size: 40.625%; // 1rem = 6.5px; 6.5/16 = 40.675%;
+	}
+
+	@include respond(big-desk) {
+		// WIDTH > 1800PX = 112.5em
+		font-size: 75%; // 1rem = 12px; 12/16 = 75%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	padding: 3rem;
+
+	@include respond(tab-land) {
+		padding: 1.5rem;
+	}
+
+	@include respond(phone) {
+		padding: 0rem;
+	}
+}
+
+.section-main {
+	margin-top: 1rem;
+}
+
+::selection {
+	background-color: $primary-color;
+	color: $color-white;
+}
+
+::-webkit-scrollbar {
+	height: 0px;
+	width: 5px;
+}
+::-webkit-scrollbar-thumb {
+	height: 150px;
+	background-color: $primary-color;
+	border-radius: 100px;
+}

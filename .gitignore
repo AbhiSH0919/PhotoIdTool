@@ -15,7 +15,11 @@ dist-ssr
 *.local
 
 # CHANGELOG file
-./CHANGELOG.md
+./CHANGELOG.
+
+# DEV FILES
+src/main/reactVite/dev/abhish/assets/styles/css/style.comp.css
+src/main/reactVite/dev/abhish/assets/styles/css/style.prefix.css
 
 # Editor directories and files
 .vscode/*

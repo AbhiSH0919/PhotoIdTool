@@ -1,0 +1,70 @@
+@mixin clearfix {
+	// (__.row::after__)
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* 
+  // =====MEDIA-QUERY-MANAGER=====$BREAKPOINT-ARGUMENT-CHOISES=====
+	  - 0-420PX			:	SMALL-PHONE
+      - 420-600PX    	:   PHONE
+      - 600-900PX    	:   TAB-PORT
+      - 900-1200PX   	:   TAB-LAND
+      - 1200-1800PX  	:   NORMAL STYLE
+      - 1800PX+      	:   BIG-DESK
+*/
+
+// ===========ITS THE REGULAR @MIXIN TRICK=================
+@mixin respond-phone {
+	@media only screen and (max-width: 600px) {
+		@content;
+	}
+}
+
+// ===========ITS THE @MIXIN FUNCTINALITY TRICK=================
+@mixin respond($breakpoint) {
+	@if $breakpoint == small-phone {
+		// WIDTH < 420PX
+		@media only screen and (max-width: 26.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == phone {
+		// WIDTH < 600PX
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		// WIDTH < 900PX
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		// WIDTH < 1200PX
+		@media only screen and (max-width: 75em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == big-desk {
+		// WIDTH > 1800PX
+		@media only screen and (min-width: 112.5em) {
+			@content;
+		}
+	}
+}
