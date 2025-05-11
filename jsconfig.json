@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"baseUrl": "",
+		"paths": {
+			"@assets/*": ["src/main/dev_abhi/assets/*"],
+			"@shared/*": ["src/main/dev_abhi/shared/*"]
+		}
+	}
+	// "include": ["src", "style", "css"]
+}

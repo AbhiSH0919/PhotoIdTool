@@ -1,3 +1,31 @@
-// .footer {
-// 	font-size: 1.8rem;
-// }
+/* ================================Footer================================== */
+.footer {
+	// font-size: 1.8rem;
+	color: $color-white-1;
+	background: $color-bg-dark-1;
+	width: 100%;
+	height: 4rem;
+	padding: 1rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 9;
+}
+
+.aurthor a:link {
+	display: inline-block;
+	color: $tertiary-color;
+	backface-visibility: hidden;
+	transition: all 0.3s;
+}
+
+.aurthor a:hover {
+	color: $hover-color-3;
+	transform: translateY(-0.2rem) scale(1.05);
+}

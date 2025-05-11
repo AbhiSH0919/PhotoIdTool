@@ -48,3 +48,23 @@
 - Not Added or updated previous photo id tool code or some scss files are not empty.
 
 ---
+
+## [2.0.0] - 2025-05-11
+
+### Added
+
+- Added styling using sass.
+- Added routing on pages.
+- Added redux slices & store for working with state.
+- Added static paths for import others type files easily.
+
+### Updated
+
+- Update all traditional html to jsx .
+- Update all css to sass.
+
+### Notes
+
+- Only have stylings nothing Js logics & functions to work properly.
+
+---

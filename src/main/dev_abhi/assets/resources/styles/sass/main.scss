@@ -10,17 +10,20 @@
 
 // =========components======================
 @import "components/button";
+@import "components/mainImgContainer";
+@import "components/photoOperationsContainer";
 
 // =========layout==========================
 @import "layout/footer";
-@import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
 
 // =========pages===========================
 @import "pages/home";
+@import "pages/printPage";
 
 // =========pages===========================
 @import "utils/utilities";
+@import "utils/loader";
 
 // =========================================

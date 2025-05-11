@@ -21,7 +21,7 @@
 
 - `React vite` (HTML5, CSS3, JavaScript) for development
 - `Sass` for css proccesing & styling
-- `Redux Toolkit` for managing data with flow
+- `Redux Toolkit` for managing data with flow (state management)
 - `React Router` for multiple pages
 - `html2pdf.js` for PDF generation
 - `SVG icons` for favicon & icons
@@ -38,6 +38,7 @@
    cd PhotoIdTool
    npm run dev
    ```
+2. Check `package.json` file for more
 
 ## 📝 Usage
 

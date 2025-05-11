@@ -17,19 +17,17 @@
 /* 
   // =====MEDIA-QUERY-MANAGER=====$BREAKPOINT-ARGUMENT-CHOISES=====
 	  - 0-420PX			:	SMALL-PHONE
-      - 420-600PX    	:   PHONE
-      - 600-900PX    	:   TAB-PORT
-      - 900-1200PX   	:   TAB-LAND
-      - 1200-1800PX  	:   NORMAL STYLE
+      - 0-560PX 	   	:   PHONE
+      - 560-940PX    	:   TAB-PORT
+      - 940-1080PX   	:   TAB-LAND
+      - 1080-1800PX  	:   NORMAL STYLE
       - 1800PX+      	:   BIG-DESK
-*/
 
-// ===========ITS THE REGULAR @MIXIN TRICK=================
-@mixin respond-phone {
-	@media only screen and (max-width: 600px) {
-		@content;
-	}
-}
+	  	************Screens Width************
+		- screen: 1080px	= 67.5em;
+		- screen: 940px		= 58.75em;
+		- screen: 560px		= 35em;
+*/
 
 // ===========ITS THE @MIXIN FUNCTINALITY TRICK=================
 @mixin respond($breakpoint) {
@@ -41,22 +39,22 @@
 	}
 
 	@if $breakpoint == phone {
-		// WIDTH < 600PX
-		@media only screen and (max-width: 37.5em) {
+		// WIDTH < 560PX
+		@media only screen and (max-width: 35em) {
 			@content;
 		}
 	}
 
 	@if $breakpoint == tab-port {
-		// WIDTH < 900PX
-		@media only screen and (max-width: 56.25em) {
+		// WIDTH < 940PX
+		@media only screen and (max-width: 58.75em) {
 			@content;
 		}
 	}
 
 	@if $breakpoint == tab-land {
-		// WIDTH < 1200PX
-		@media only screen and (max-width: 75em) {
+		// WIDTH < 1080PX
+		@media only screen and (max-width: 67.5em) {
 			@content;
 		}
 	}

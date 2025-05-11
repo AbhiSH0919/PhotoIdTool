@@ -42,3 +42,55 @@
 		transform: translate(0);
 	}
 }
+
+@keyframes logoSpin {
+	from {
+		transform: scale(1) rotate(0deg);
+	}
+	to {
+		transform: scale(1.2) rotate(360deg);
+	}
+}
+
+/* ================================Loading Animations=================== */
+@keyframes fadeInOut {
+	0% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+
+@keyframes scaling {
+	0% {
+		transform: scale(1.2);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes boxMoveing {
+	0%,
+	40% {
+		background-position: 0 0, 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%,
+			100% 0, 50% 0, 50% 50%;
+	}
+
+	60%,
+	100% {
+		background-position: 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0,
+			50% 0, 0 0, 50% 50%;
+	}
+}

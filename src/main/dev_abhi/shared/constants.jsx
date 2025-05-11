@@ -1,3 +1,10 @@
-// ====================main\reactVite\dev\abhish=====================
+// ====================main\dev_abhi=================================
 
-// ====================main\vendors==================================
+// ==========assets==========
+// =====icons=====
+// import { icons, images } from "@assets/resources/js/pathShare";
+import assets from "@assets/resources/js/pathShare";
+
+// export default images;
+// export { icons };
+export default assets;

@@ -1,0 +1,37 @@
+/* ================================Printing Page=========================== */
+@media print {
+	body {
+		background: repeating-conic-gradient(
+				$color-white-3 0% 25%,
+				$color-white 0% 50%
+			)
+			50% / 2rem 2rem;
+
+		& * {
+			visibility: hidden !important;
+		}
+	}
+
+	.mainContainer {
+		background: none !important;
+		padding: 0 !important;
+		box-shadow: none !important;
+		visibility: visible !important;
+		overflow: visible !important;
+
+		& * {
+			visibility: visible !important;
+			// @extend .mainContainer;
+		}
+	}
+
+	.utilityBox,
+	.header,
+	.footer {
+		display: none !important;
+	}
+
+	@page {
+		padding: 1.5rem;
+	}
+}
