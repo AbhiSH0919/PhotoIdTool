@@ -2,11 +2,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // ==============================REDUCERS-SLICCESS==========================
-import { uploadReducers } from "../features/upload/uploadSlice";
+import { imagesHandlingReducers } from "../features/imageHandle/imagesHandlingSlice";
+import { userConfigurationReducers } from "../features/userConfigurationSlice";
 
 const store = configureStore({
 	reducer: {
-		upload: uploadReducers,
+		imagesHandling: imagesHandlingReducers,
+		userConfiguration: userConfigurationReducers,
 	},
 });
 

@@ -18,14 +18,20 @@
 	z-index: 9;
 }
 
-.aurthor a:link {
-	display: inline-block;
-	color: $tertiary-color;
-	backface-visibility: hidden;
-	transition: all 0.3s;
-}
+.aurthor a {
+	&:link {
+		display: inline-block;
+		color: $tertiary-color;
+		backface-visibility: hidden;
+		transition: all 0.3s;
+	}
 
-.aurthor a:hover {
-	color: $hover-color-3;
-	transform: translateY(-0.2rem) scale(1.05);
+	&:hover {
+		color: $hover-color-3;
+		transform: translateY(-0.1rem) scale(1.05);
+	}
+
+	&:active {
+		transform: translateY(0) scale(1);
+	}
 }

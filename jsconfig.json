@@ -3,7 +3,9 @@
 		"baseUrl": "",
 		"paths": {
 			"@assets/*": ["src/main/dev_abhi/assets/*"],
-			"@shared/*": ["src/main/dev_abhi/shared/*"]
+			"@shared/*": ["src/main/dev_abhi/shared/*"],
+			"@app/*": ["src/main/dev_abhi/app/*"],
+			"@components/*": ["src/main/dev_abhi/components/*"]
 		}
 	}
 	// "include": ["src", "style", "css"]

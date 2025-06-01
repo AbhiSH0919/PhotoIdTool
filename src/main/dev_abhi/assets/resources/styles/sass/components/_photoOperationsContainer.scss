@@ -66,4 +66,7 @@
 	padding: 0.4rem 1.2rem;
 	border: 0.2rem solid $color-white-1;
 	border-radius: 0.6rem;
+	&::selection {
+		color: $color-bg-dark !important;
+	}
 }

@@ -1,11 +1,11 @@
+/* ====================ICONS==================== */
 import faviconIcon from "../icons/favicon.svg";
-import viteIcon from "../icons/vite.svg";
 
+/* ====================IMAGES==================== */
 import profileImgUrl from "../images/AbhishekKembalikarLarge.jpg";
 
 const icons = {
 	faviconIcon,
-	viteIcon,
 };
 
 const images = {

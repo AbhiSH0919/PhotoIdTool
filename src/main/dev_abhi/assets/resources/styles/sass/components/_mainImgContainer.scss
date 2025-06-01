@@ -5,9 +5,9 @@
 	height: 100%;
 	background: $color-bg-dark-2;
 	padding: 1rem 1rem 15rem 1rem;
-	box-shadow: 0 2rem 2rem 1rem rgba($color-gray, 0.2),
-		0px 4rem 4rem 4rem rgba($color-gray, 0.2),
-		inset 0px 2rem 4rem rgba($color-gray, 0.2);
+	box-shadow: 0 2rem 2rem 1rem rgba($color-bg-dark, 0.2),
+		0px 4rem 4rem 4rem rgba($color-bg-dark, 0.2),
+		inset 0px 2rem 4rem rgba($color-bg-dark, 0.2);
 	position: relative;
 	overflow: hidden;
 	overflow-y: scroll;

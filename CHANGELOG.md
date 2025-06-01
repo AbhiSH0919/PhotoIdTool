@@ -68,3 +68,22 @@
 - Only have stylings nothing Js logics & functions to work properly.
 
 ---
+
+## [2.0.0] - 2025-06-01
+
+### Added
+
+- Added Js logics for work app properly.
+- Added upload images, generated more images, download as pdf or print directly.
+- Added redux slices & store for working with state.
+- Added static paths for import others type files easily.
+
+### Updated
+
+- Update necessary jsx.
+
+### Notes
+
+- Working as a previous traditionl code/functionality.
+
+---

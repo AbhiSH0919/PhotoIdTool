@@ -1,29 +1,71 @@
-// import images from "@shared/Constants";
+/* ====================REDUX==================== */
+import { useDispatch, useSelector } from "react-redux";
+
+/* ====================COMPONENTS==================== */
 import { Loader } from "../utils/Loader";
-import { ImgTag } from "../utils/ImgTag";
+import { ImgTag } from "./ImgTag";
 
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+/* ====================CONSTANTS==================== */
+import { DRAGLEAVE, DRAGOVER, DROP } from "@shared/Constants";
 
-const MainImgContainer = function () {
-	const { profileImgUrl, images } = useSelector((state) => state.upload);
+/* ====================UTILITY_FUNCTIONS==================== */
+import { checkInputFiles } from "../utils/checkInputFiles";
 
-	const [imgUrl, setImgUrl] = useState(profileImgUrl);
+/* ====================FEATURES_SLICE==================== */
+import { uploadImg } from "../app/features/imageHandle/imagesHandlingSlice";
+/* ============================================================ */
+
+const MainImgContainer = function ({ downloadContext }) {
+	const { profileImgUrl, imagesUrls } = useSelector(
+		(state) => state.imagesHandling
+	);
+	const dispatch = useDispatch();
+
+	const onDropChange = function (e) {
+		const selectedFiles = [...e?.dataTransfer?.files];
+		const imagesUrls = checkInputFiles(selectedFiles);
+
+		dispatch(uploadImg(imagesUrls));
+	};
+
+	const handleDragDrop = function (e, action) {
+		e.preventDefault();
+		const ele = e.target.closest(".mainContainer");
+
+		action === DRAGOVER && ele.classList.add("dragHover");
+		action === DRAGLEAVE && ele.classList.remove("dragHover");
+		action === DROP &&
+			(ele.classList.remove("dragHover") || (action && onDropChange(e)));
+	};
 
 	return (
 		<>
-			<section className="section">
-				<div
-					className="mainContainer showLoade dragHove"
-					aria-placeholder="drop Your Images Here!"
-				>
-					<div className="imgContainer">
-						<ImgTag imgUrl={imgUrl} />
-					</div>
-				</div>
+			<div
+				ref={downloadContext}
+				className={"mainContainer showLoade dragHove"}
+				aria-placeholder="drop Your Images Here!"
+				onDragOver={(e) => handleDragDrop(e, DRAGOVER)}
+				onDragLeave={(e) => handleDragDrop(e, DRAGLEAVE)}
+				onDrop={(e) => handleDragDrop(e, DROP)}
+			>
+				<div className="imgContainer">
+					{imagesUrls.length === 0 ? (
+						<>
+							<ImgTag imgUrl={profileImgUrl} />
+						</>
+					) : (
+						imagesUrls?.map((imgUrl, i) => {
+							return <ImgTag key={i} imgUrl={imgUrl} />;
+						})
+					)}
 
-				<Loader />
-			</section>
+					{/* {imagesUrls?.map((imgUrl, i) => {
+							return <ImgTag key={i} imgUrl={imgUrl} />;
+						})} */}
+				</div>
+			</div>
+
+			<Loader />
 		</>
 	);
 };

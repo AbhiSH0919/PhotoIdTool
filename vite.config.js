@@ -9,6 +9,8 @@ export default defineConfig({
 		alias: {
 			"@assets": path.resolve(__dirname, "src/main/dev_abhi/assets"),
 			"@shared": path.resolve(__dirname, "src/main/dev_abhi/shared"),
+			"@app": path.resolve(__dirname, "src/main/dev_abhi/app"),
+			"@components": path.resolve(__dirname, "src/main/dev_abhi/components"),
 		},
 	},
 });

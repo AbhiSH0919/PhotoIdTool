@@ -19,11 +19,14 @@
 		will-change: transform; /* GPU accelerated */
 		width: 9.5rem;
 		height: 9.5rem;
+		border-radius: 1rem;
 		--c: no-repeat linear-gradient(#{$color-white});
 		background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
 			var(--c), var(--c), var(--c);
 		background-size: 1.6rem 1.6rem;
-		animation: boxMoveing 1s infinite, fadeInOut 1s infinite !important;
+		background-position: 0 0, 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%,
+			100% 0, 50% 0, 50% 50%;
+		animation: fadeInOut 1s infinite, logoSpin 1s infinite !important;
 		z-index: 99999;
 	}
 }

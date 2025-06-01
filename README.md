@@ -8,7 +8,7 @@
 
 - ✂️ **Auto-resize** to standard ID photo sizes (passport, visa, etc.)
 - 📤 **Upload and preview** your photo instantly
-- ☑ **Only img file type** supports to create photos row
+- ☑ **Only img file type** supports to create photos row for printing
 - 📸 **Drag-and-drop** image support
 - 🖨️ **Download as high-quality PDF** with all images
 - 📄 **Print-ready** layout for passport photos
@@ -42,8 +42,8 @@
 
 ## 📝 Usage
 
-1. Select the **number of copies** you need.
-2. **Upload** or **drop** your photo(s) onto the canvas.
+1. **Upload** or **drop** your photo(s) onto the canvas.
+2. Select the **number of copies** you need and hit the **Generte Images** button.
 3. Click **"Download as PDF"** to save your ID photo sheet.
 4. You can also choose to **Print directly** from the browser.
 
